@@ -30,20 +30,20 @@
 
 def raiz_quadrada(x, y, e):
   iteracoes = 0
-  while True:
+  while True: #while infinito
     iteracoes += 1
-    y_anterior = y
-    y_atual = ((y + (x / y)) / 2)
+    y_anterior = y #atualizando o y preservando o valor anterior
+    y_atual = ((y + (x / y)) / 2) #atualizando o valor de y
     
-    if y_anterior > y_atual:
+    if y_anterior > y_atual: # comparacao para fazer a diferenca e enfim testar a condicao de parada -> diferença entre y ser menor do que a margem de erro
       dif = y_anterior - y_atual
     else:
       dif = y_atual - y_anterior 
   
-    if dif <= e:
+    if dif <= e: # condicao de parada do while
         return y_atual, iteracoes
     else:
-        y = y_atual
+        y = y_atual # se a diferenca nao for menor que a margem de erro refazer o loop e atualizar o valor de y
       
 
 
