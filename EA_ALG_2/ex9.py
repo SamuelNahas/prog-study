@@ -35,7 +35,12 @@ def raiz_quadrada(x, y, e):
     y_anterior = y
     y_atual = ((y + (x / y)) / 2)
     
-    if (abs(y_anterior - y_atual)) <= e:
+    if y_anterior > y_atual:
+      dif = y_anterior - y_atual
+    else:
+      dif = y_atual - y_anterior 
+  
+    if dif <= e:
         return y_atual, iteracoes
     else:
         y = y_atual
