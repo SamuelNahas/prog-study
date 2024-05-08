@@ -55,4 +55,4 @@ e = float(input())
 
 raiz_aproximada, iteracoes = raiz_quadrada(x, y, e)
 
-print("Foram realizadas {0} iterações para se determinar o valor aproximado para a raiz quadrada de {1:.2f} que é {2:.5f}".format(iteracoes, x, raiz_aproximada))
+print("Foram realizadas {0} iterações para se determinar o valor aproximado para a raiz quadrada de {1:.2f} que é {2:.6f}".format(iteracoes, x, raiz_aproximada))
