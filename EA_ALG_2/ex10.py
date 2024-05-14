@@ -6,7 +6,7 @@ for i in range(1, num, 1):
     if num%i==0: 
         soma_divisores += i
 
-if soma_divisores < num:
+if soma_divisores < num: 
     print("{0} deficiente".format(num))
 elif soma_divisores == num: 
     print("{0} perfeito".format(num))
