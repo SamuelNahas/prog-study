@@ -33,15 +33,15 @@ def valor_absoluto(y1, y2):
 
 def raiz_quadrada(x, y, e):
   iteracoes = 0
-  while True:
+  while True: #while infinito
     iteracoes += 1
-    y_anterior = y
-    y_atual = ((y + (x / y)) / 2)
+    y_anterior = y #atualizando o y preservando o valor anterior
+    y_atual = ((y + (x / y)) / 2) #atualizando o valor de y
     
     if valor_absoluto(y_anterior, y_atual) <= e:
         return y_atual, iteracoes
     else:
-        y = y_atual
+        y = y_atual # se a diferenca nao for menor que a margem de erro refazer o loop e atualizar o valor de y
       
 
 
@@ -53,4 +53,4 @@ e = float(input())
 
 raiz_aproximada, iteracoes = raiz_quadrada(x, y, e)
 
-print("Foram realizadas {0} iterações para se determinar o valor aproximado para a raiz quadrada de {1:.2f} que é {2:.5f}".format(iteracoes, x, raiz_aproximada))
+print("Foram realizadas {0} iterações para se determinar o valor aproximado para a raiz quadrada de {1:.2f} que é {2:.6f}".format(iteracoes, x, raiz_aproximada))
