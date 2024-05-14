@@ -27,6 +27,9 @@
 #         else:
 #             continue
 
+def valor_absoluto(y1, y2):
+  if y1 > y2: return y1-y2
+  else: return y2-y1
 
 def raiz_quadrada(x, y, e):
   iteracoes = 0
@@ -35,7 +38,7 @@ def raiz_quadrada(x, y, e):
     y_anterior = y
     y_atual = ((y + (x / y)) / 2)
     
-    if (abs(y_anterior - y_atual)) <= e:
+    if valor_absoluto(y_anterior, y_atual) <= e:
         return y_atual, iteracoes
     else:
         y = y_atual
