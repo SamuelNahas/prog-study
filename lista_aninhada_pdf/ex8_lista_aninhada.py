@@ -1,9 +1,10 @@
-interval = range(101, 277)
-divis = []
 
-for i in interval:
-    for j in range(i):
+
+result = ""
+
+for i in range(101, 278):
+    for j in range(1, (i+1)):
         if j % i == 0:
-            divis.append(j)
+            result += "\n{0}".format(i)            
 
-print(divis)
+print(result)
